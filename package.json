@@ -1,0 +1,27 @@
+{
+  "name": "decanter-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramesh-anandhan/decanter-nodejs.git"
+  },
+  "author": "Ramesh Anandhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramesh-anandhan/decanter-nodejs/issues"
+  },
+  "homepage": "https://github.com/ramesh-anandhan/decanter-nodejs#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "config": "^1.26.1",
+    "express": "^4.15.3",
+    "express-session": "^1.15.4",
+    "lodash": "^4.17.4",
+    "morgan": "^1.8.2"
+  }
+}
