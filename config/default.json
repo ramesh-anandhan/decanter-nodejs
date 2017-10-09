@@ -1,5 +1,14 @@
 {
     "appName": "ape-decanter-api",
     "port": "3000",
-    "basePath": "/decanter"
+    "basePath": "/decanter",
+    "sql": {
+        "poolSize": 100,
+        "host": "localhost",
+        "userName": "root",
+        "passWord": "smh00213",
+        "dbName": "glukoin",
+        "connectTimeout": 60000,
+        "acquireTimeout": 60000
+    }
 }

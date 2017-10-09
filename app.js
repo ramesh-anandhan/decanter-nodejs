@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const constant = require('./src/const/const');
 const router = require('./src/router/router');
+
 const app = express();
 
 app.set('trust proxy', true);
@@ -23,7 +24,7 @@ app.use(morgan('tiny', {
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
     next();
 });
 
