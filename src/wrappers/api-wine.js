@@ -1,64 +1,119 @@
 var constant = require('../const/const');
+const mysql = require('../database/sql-client');
+const _ = require('lodash');
 
 const apiWines = {
     wines: (req, res) => {
-        let wines = [
-            {
-                id: 'random1', title: 'Pine Ridge', vintage: 2014, country: 'United States', region: 'Napa Valley', score: 94, review: '', brandName: '',
-                description: 'True American. Plain and fair. Doesnt have high alcohol but has good fleshy body. Raisins, tobacco, leather. Deep ruby color. Quite low tannins.',
-                image: 'https://s3-eu-west-1.amazonaws.com/decanter-prod-aws1-timeincuk-net/media/images/00000a24c-02-domaine-chataigneraie-laborier-gilles-morat-aux-vignes-dessus-pouilly-fuiss-2013-581730bd4ea60.jpeg'
-            },
-            {
-                id: 'random2', title: 'Estate Merlot', vintage: 2009, country: 'United States', region: 'California', score: 91, review: '', brandName: 'Beringer Vineyards',
-                description: 'Lovely big robust dark wine. Oozes spice and purple fruit. Light nose but a very enjoyable drinking wine. Some light smoke which adds to the full flavours in this bottle.',
-                image: 'https://s3-eu-west-1.amazonaws.com/decanter-prod-aws1-timeincuk-net/media/images/00000a25a-16-domaine-duroch-les-jeunes-rois-gevrey-chambertin-2013-581730c6671e0.jpeg'
-            },
-            {
-                id: 'random3', title: 'Furth', vintage: 2013, country: 'United States', region: 'Sonoma County', score: 93, review: '', brandName: 'Chalk Hill',
-                description: 'The wine is still youthful with vibrant, dark fruit. The tannins have mellowed and are right in the zone. Classic Cabernet profile of dark fruit (cassis) with leather on the finish',
-                image: 'https://s3-eu-west-1.amazonaws.com/decanter-prod-aws1-timeincuk-net/media/images/marchand-amp-burch-mount-barrow-pinot-noir-mount-barker-2013-581735a086ef9.jpeg'
-            },
-            {
-                id: 'random4', title: 'Sonoma', vintage: 2004, country: 'United States', region: 'Sonoma County', score: 95, review: '', brandName: 'Seghesio Family Vineyards',
-                description: 'You just cant beat this price point. 18 bucks? Drinks like twice the cost. You can impress many a folk with this bottle of Zen.',
-                image: 'https://s3-eu-west-1.amazonaws.com/decanter-prod-aws1-timeincuk-net/media/images/000009ef8-brezza-sarmassa-barolo-2010-58173520d217d.jpeg'
-            },
-        ];
+        let type = req.query.query;
 
+        if (!type)
+            type = 'all';
 
-        res.status(constant.SUCCESS).send(wines);
+        let query;
+        if (type === 'all' || type === 'recommend' || type === 'top')
+            query = "SELECT * FROM wines WHERE type='" + type + "'";
+        else
+            query = "SELECT * FROM wines WHERE title LIKE '%" + type + "%'";
+
+        mysql.pool.getConnection((err, conn) => {
+            if (err) res.status(constant.SUCCESS).send('Error fetching wines data!!!');
+
+            conn.query(query, (err, result) => {
+                if (err) res.status(constant.SUCCESS).send('Error fetching wines data!!!');
+
+                let wines = [];
+                wines = _.map(result, (wine) => {
+                    let wineItem = {
+                        id: wine.id,
+                        title: wine.title,
+                        vintage: wine.vintage,
+                        country: wine.country,
+                        region: wine.region,
+                        score: wine.score,
+                        review: wine.review,
+                        brandName: wine.brandName,
+                        description: wine.description,
+                        image: wine.image
+                    }
+                    return wineItem;
+                });
+
+                res.status(constant.SUCCESS).send(wines);
+                conn.release();
+            });
+        });
     },
 
     winePrice: (req, res) => {
-        let winePrice = [{
-            country: {
-                code:"USA",
-            },
-            currency: {
-                symbol:"$"
-            },
-            price:13.5,
-            stockist: {
-                name: 'Le Petit Depot'
-            }
-        }];
-        res.status(constant.SUCCESS).send(winePrice);
+        let wineId = req.params.wineId;
+
+        if (wineId) {
+            let query = "SELECT * FROM price WHERE wineId='" + wineId + "'";
+            mysql.pool.getConnection((err, conn) => {
+                if (err) res.status(constant.SUCCESS).send('Error fetching wine data !!!');
+                conn.query(query, (err, results) => {
+                    if (err) res.status(constant.SUCCESS).send('Error fetching wine data !!!');
+
+                    let winePrice = [];
+                    if (results.length > 0) {
+                        results.map((priceRes) => {
+                            let price = {
+                                country: {
+                                    code: priceRes.code,
+                                },
+                                currency: {
+                                    symbol: priceRes.symbol,
+                                },
+                                price: priceRes.price,
+                                stockist: {
+                                    name: priceRes.stockName
+                                }
+                            };
+                            winePrice.push(price);
+                        });
+
+                        res.status(constant.SUCCESS).send(winePrice);
+                    } else {
+                        res.status(constant.SUCCESS).send(winePrice);
+                    }
+                });
+            });
+        }
+
     },
 
     winesDetails: (req, res) => {
-        let wineDetails = {
-            id: req.params.wineId,
-            title: 'Pine Ridge',
-            vintage: 2014,
-            country: 'United States',
-            region: 'Napa Valley',
-            image: 'https://s3-eu-west-1.amazonaws.com/decanter-prod-aws1-timeincuk-net/media/images/00000a24c-02-domaine-chataigneraie-laborier-gilles-morat-aux-vignes-dessus-pouilly-fuiss-2013-581730bd4ea60.jpeg',
-            score: 94,
-            review: '',
-            description: 'True American. Plain and fair. Doesnt have high alcohol but has good fleshy body. Raisins, tobacco, leather. Deep ruby color. Quite low tannins.',
-            brandName: 'Shiraz'
-        };
-        res.status(constant.SUCCESS).send(wineDetails);
+        let wineId = req.params.wineId;
+
+        if (wineId) {
+            let query = "SELECT * FROM wines WHERE id='" + wineId + "'";
+            mysql.pool.getConnection((err, conn) => {
+                if (err) res.status(constant.SUCCESS).send('Error fetching wine data !!!');
+                conn.query(query, (err, result) => {
+                    if (err) res.status(constant.SUCCESS).send('Error fetching wine data !!!');
+
+                    if (result.length > 0) {
+                        let wineDetails = {
+                            id: req.params.wineId,
+                            title: result[0].title,
+                            vintage: result[0].vintage,
+                            country: result[0].country,
+                            region: result[0].region,
+                            image: result[0].image,
+                            score: result[0].score,
+                            review: result[0].review,
+                            description: result[0].description,
+                            brandName: result[0].brandName
+                        };
+                        res.status(constant.SUCCESS).send(wineDetails);
+                    } else {
+                        res.status(constant.SUCCESS).send('Invalid parameters !!!');
+                    }
+                });
+            });
+        } else {
+            res.status(constant.SUCCESS).send('Parameter missing !!!');
+        }
     }
 };
 
