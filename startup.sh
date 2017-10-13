@@ -32,9 +32,9 @@ echo "starting docker "
 
  if [[ $OSTYPE == darwin* ]];
  then
-    docker run -d -p 8091:8091 -v /private/var/log:/logs -e SQL_SECRET_KEY="${SQL_SECRET_KEY}"  NODE_ENV="${NODE_ENV}" -e PORT="${PORT}" ape-decanter-nodejs:latest > docker.pid
+    docker run -d -p 8091:8091 -v /private/var/log:/logs -e SQL_SECRET_KEY="${SQL_SECRET_KEY}" -e NODE_ENV="${NODE_ENV}" -e PORT="${PORT}" ape-decanter-nodejs:latest > docker.pid
  else
-    docker run -d -p 8091:8091 -v /var/log:/logs -e SQL_SECRET_KEY="${SQL_SECRET_KEY}"  NODE_ENV="${NODE_ENV}" -e PORT="${PORT}" ape-nme-nodejs:latest > docker.pid
+    docker run -d -p 8091:8091 -v /var/log:/logs -e SQL_SECRET_KEY="${SQL_SECRET_KEY}" -e NODE_ENV="${NODE_ENV}" -e PORT="${PORT}" ape-nme-nodejs:latest > docker.pid
  fi
 
 echo "started docker successfully, image id : " `cat docker.pid`
