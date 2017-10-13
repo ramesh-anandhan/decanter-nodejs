@@ -1,7 +1,7 @@
 {
     "appName": "ape-decanter-api",
     "port": "3000",
-    "basePath": "/decanter",
+    "basePath": "/decanter-blr",
     "sql": {
         "poolSize": 100,
         "host": "localhost",
