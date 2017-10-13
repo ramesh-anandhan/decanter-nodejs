@@ -1,0 +1,11 @@
+node_modules
+Logs.logs-*
+Dockerfile
+startup.sh
+*.pid
+.git
+.gitignore
+__MACOSX
+*.DS_Store
+reports
+logs
