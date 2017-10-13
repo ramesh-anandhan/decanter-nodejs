@@ -1,0 +1,37 @@
+code,symbol,price,stockName,url,wineId,id
+USA,$,50,"Sherry-Lehmann Wine",na,06MtcjtOaioKzc5EnCZCZ9i6KdXIzuktyLs5K7PXR3rCkyZInMaPQP902NHi2cwwyy4WtC5bUkZzFZKeswOpUe,37
+USA,$,75,"Frankly Wines",na,06MtcjtOaioKzc5EnCZCZ9i6KdXIzuktyLs5K7PXR3rCkyZInMaPQP902NHi2cwwyy4WtC5bUkZzFZKeswOpUe,38
+USA,$,60,"Astor Wines",na,2mEgoV4jbYJSf1kcg9TXXuRSorj65wtdXWZxH6kSvvRhbWuiYGGo55x1VWcRS1FWBjWSlWIniAgX8gDHqBJnbY,39
+USA,$,40,"Chambers Street Wines",na,2mEgoV4jbYJSf1kcg9TXXuRSorj65wtdXWZxH6kSvvRhbWuiYGGo55x1VWcRS1FWBjWSlWIniAgX8gDHqBJnbY,40
+USA,$,60,"Astor Wines",na,CeGGDmT8NEAUAo9Y6imbbEcYFjmi1wKBK5IJyaU4CkbWEVyjPTchb9ARMvQ2V79qlwi5JLmsVu0JDAoGPS3Gy6,41
+USA,$,40,"Chambers Street Wines",na,CeGGDmT8NEAUAo9Y6imbbEcYFjmi1wKBK5IJyaU4CkbWEVyjPTchb9ARMvQ2V79qlwi5JLmsVu0JDAoGPS3Gy6,42
+USA,$,50,"Sherry-Lehmann Wine",na,cTvEA4zmUq2xYJIGXhWNCciWv1ZE23mqMz9TZZsFMhfWwreRadwn1dYItlTfP3l1oqvuHZFchZjyypxSbYt0nX,43
+USA,$,75,"Frankly Wines",na,cTvEA4zmUq2xYJIGXhWNCciWv1ZE23mqMz9TZZsFMhfWwreRadwn1dYItlTfP3l1oqvuHZFchZjyypxSbYt0nX,44
+USA,$,50,"Sherry-Lehmann Wine",na,e0DZCXiEhDPMAq7hhPiaBV1EEtZFBAXQ7959xiWl7p6Ssn93cVRFuo1cJipLjtIOBugPxyjsfGWqlXAOKOAsQP,45
+USA,$,75,"Frankly Wines",na,e0DZCXiEhDPMAq7hhPiaBV1EEtZFBAXQ7959xiWl7p6Ssn93cVRFuo1cJipLjtIOBugPxyjsfGWqlXAOKOAsQP,46
+USA,$,55,"Le Du's Wines",na,ETKLP6rz486zBK9UgFDpP54BZfz8TYifR5sBdx99IzJJE8EGXfUUW0QtS2yg5TVZKT58oM8uG4uROqNe0eiYNI,47
+USA,$,65,"Burgundy Wine",na,ETKLP6rz486zBK9UgFDpP54BZfz8TYifR5sBdx99IzJJE8EGXfUUW0QtS2yg5TVZKT58oM8uG4uROqNe0eiYNI,48
+USA,$,60,"Astor Wines",na,gamEigdxNRvwlXk5keBA843mjhkjXpkdJLIqGvzggDghjVkjl24Oryecc6UDZyOQh1NPAzU1SYwCcBHrHOjklu,49
+USA,$,40,"Chambers Street Wines",na,gamEigdxNRvwlXk5keBA843mjhkjXpkdJLIqGvzggDghjVkjl24Oryecc6UDZyOQh1NPAzU1SYwCcBHrHOjklu,50
+USA,$,55,"Le Du's Wines",na,HQHVsLETBf2sn9FQlluLEkU7QAMqwX2KBoDK4PLiGiOfMb8gKo5Lg2jmmuKkeFLEH5hLA9b4oSOdOdB56ocJBa,51
+USA,$,65,"Burgundy Wine",na,HQHVsLETBf2sn9FQlluLEkU7QAMqwX2KBoDK4PLiGiOfMb8gKo5Lg2jmmuKkeFLEH5hLA9b4oSOdOdB56ocJBa,52
+USA,$,60,"Astor Wines",na,kYl2qRgoe2c3LwBXgd7zLntdOiRuf1VJmJe2x39v5QR09vcDo7yQTFxMZtoNVd9ftuqAyRyAa5tGKC1UbC6OuZ,53
+USA,$,40,"Chambers Street Wines",na,kYl2qRgoe2c3LwBXgd7zLntdOiRuf1VJmJe2x39v5QR09vcDo7yQTFxMZtoNVd9ftuqAyRyAa5tGKC1UbC6OuZ,54
+USA,$,35,"Union Square Wine",na,n9TZYAqDce6G0DWbTAI9UAvIPy0HI0UkooMHH1kY2q7iCGspQCVLBdDGcPJf0tP34NnBOEQ9BgC4NSTbH4ene0,55
+USA,$,25,"Millesima Usallc",na,n9TZYAqDce6G0DWbTAI9UAvIPy0HI0UkooMHH1kY2q7iCGspQCVLBdDGcPJf0tP34NnBOEQ9BgC4NSTbH4ene0,56
+USA,$,50,"Sherry-Lehmann Wine",na,QFE3Rv4YEmgf9NJki1jLba2Nw4rKFS8fkxZwGpSt8UnOZJiDGZ7EWSpxjHorFB7JjgMulZ69xnYaSlbmW5cbdZ,57
+USA,$,75,"Frankly Wines",na,QFE3Rv4YEmgf9NJki1jLba2Nw4rKFS8fkxZwGpSt8UnOZJiDGZ7EWSpxjHorFB7JjgMulZ69xnYaSlbmW5cbdZ,58
+USA,$,50,"Sherry-Lehmann Wine",na,s4N58ZZhCJLMdHt3QSiUcmpna1juN5Wipjqy4tBZQJhVhp3RBIFsOJ0FW2UhFFipaEeZZrjooKhNiBzXBj85ou,59
+USA,$,75,"Frankly Wines",na,s4N58ZZhCJLMdHt3QSiUcmpna1juN5Wipjqy4tBZQJhVhp3RBIFsOJ0FW2UhFFipaEeZZrjooKhNiBzXBj85ou,60
+USA,$,35,"Union Square Wine",na,SbiuPbwTTzHpOYGsAxj6mA5ySF5jU3swrO3OIZFMdR9EOewSrPiKa0gMM4f5qnd6mQJpFHNehUqfLvy2CMmHTR,61
+USA,$,25,"Millesima Usallc",na,SbiuPbwTTzHpOYGsAxj6mA5ySF5jU3swrO3OIZFMdR9EOewSrPiKa0gMM4f5qnd6mQJpFHNehUqfLvy2CMmHTR,62
+USA,$,60,"Astor Wines",na,TYfiDZXkACVT2cxy7yGgkQJOpiIHnp3iVPyA3HlyfNJpdCMSpfCU0VtSxK6GWYE93nTw7QZLRjNwfmqGncWbjo,63
+USA,$,40,"Chambers Street Wines",na,TYfiDZXkACVT2cxy7yGgkQJOpiIHnp3iVPyA3HlyfNJpdCMSpfCU0VtSxK6GWYE93nTw7QZLRjNwfmqGncWbjo,64
+USA,$,35,"Union Square Wine",na,UQhI86ph3bVAZy4om6pWbRhsECrHRiOtLk4O9WCJws9vfpcjKAKoyfuOpe65EI73j3p0ouwO8IXoHjLFLD6iYL,65
+USA,$,25,"Millesima Usallc",na,UQhI86ph3bVAZy4om6pWbRhsECrHRiOtLk4O9WCJws9vfpcjKAKoyfuOpe65EI73j3p0ouwO8IXoHjLFLD6iYL,66
+USA,$,60,"Astor Wines",na,vjzBQSeNrA3bmiAV5qxMghzBdo5qnPu9SkjEKwfzGUNGaG4tzeLVzmmy1O97YZe4wlNEHHp9V4MSm0T2INtqiw,67
+USA,$,40,"Chambers Street Wines",na,vjzBQSeNrA3bmiAV5qxMghzBdo5qnPu9SkjEKwfzGUNGaG4tzeLVzmmy1O97YZe4wlNEHHp9V4MSm0T2INtqiw,68
+USA,$,55,"Le Du's Wines",na,VKi6lkGXKaR7oIBCxoq1MELa0kEhDryp4XJeBDdudrkHi1AhJhNu3SmxvdOkkfCh23x8frDf76nrn3cHQlxWbJ,69
+USA,$,65,"Burgundy Wine",na,VKi6lkGXKaR7oIBCxoq1MELa0kEhDryp4XJeBDdudrkHi1AhJhNu3SmxvdOkkfCh23x8frDf76nrn3cHQlxWbJ,70
+USA,$,55,"Le Du's Wines",na,wOhi9MbHFtMLjP9H60JAPQOhpBrN91UXQGEYow01Rl64nqnnuwN2pUKMXyzV34eCRIVPXyWVLRIEuPWCKYIeJO,71
+USA,$,65,"Burgundy Wine",na,wOhi9MbHFtMLjP9H60JAPQOhpBrN91UXQGEYow01Rl64nqnnuwN2pUKMXyzV34eCRIVPXyWVLRIEuPWCKYIeJO,72
