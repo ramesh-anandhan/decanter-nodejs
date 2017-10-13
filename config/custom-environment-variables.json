@@ -1,0 +1,6 @@
+{
+    "port": "PORT",
+    "sql": {
+        "secretKey": "SQL_SECRET_KEY"
+    }
+}

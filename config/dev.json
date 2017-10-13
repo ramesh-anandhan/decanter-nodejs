@@ -1,0 +1,8 @@
+{
+    "sql": {
+        "host": "shared-social-service-db.cl126dktpchh.us-east-1.rds.amazonaws.com",
+        "port": 3306,
+        "userName": "sharedService",
+        "dbName": "decanter"
+    }
+}

@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node ./app.js"
+    "localhost": "NODE_ENV=localhost node ./app.js",
+    "dev": "NODE_ENV=dev node ./app.js"
   },
   "repository": {
     "type": "git",

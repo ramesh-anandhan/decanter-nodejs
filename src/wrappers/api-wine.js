@@ -16,10 +16,16 @@ const apiWines = {
             query = "SELECT * FROM wines WHERE title LIKE '%" + type + "%'";
 
         mysql.pool.getConnection((err, conn) => {
-            if (err) res.status(constant.SUCCESS).send('Error fetching wines data!!!');
+            if (err) {
+                console.log(err);
+                return res.status(constant.SUCCESS).send('Error fetching wines data!!!');
+            }
 
             conn.query(query, (err, result) => {
-                if (err) res.status(constant.SUCCESS).send('Error fetching wines data!!!');
+                if (err) {
+                    console.log(err);
+                    return res.status(constant.SUCCESS).send('Error fetching wines data!!!');
+                }
 
                 let wines = [];
                 wines = _.map(result, (wine) => {
@@ -50,9 +56,15 @@ const apiWines = {
         if (wineId) {
             let query = "SELECT * FROM price WHERE wineId='" + wineId + "'";
             mysql.pool.getConnection((err, conn) => {
-                if (err) res.status(constant.SUCCESS).send('Error fetching wine data !!!');
+                if (err) {
+                    console.log(err);
+                    return res.status(constant.SUCCESS).send('Error fetching wine data !!!');
+                }
                 conn.query(query, (err, results) => {
-                    if (err) res.status(constant.SUCCESS).send('Error fetching wine data !!!');
+                    if (err) {
+                        console.log(err);
+                        return res.status(constant.SUCCESS).send('Error fetching wine data !!!');
+                    }
 
                     let winePrice = [];
                     if (results.length > 0) {
@@ -88,9 +100,15 @@ const apiWines = {
         if (wineId) {
             let query = "SELECT * FROM wines WHERE id='" + wineId + "'";
             mysql.pool.getConnection((err, conn) => {
-                if (err) res.status(constant.SUCCESS).send('Error fetching wine data !!!');
+                if (err) {
+                    console.log(err);
+                    return res.status(constant.SUCCESS).send('Error fetching wine data !!!');
+                }
                 conn.query(query, (err, result) => {
-                    if (err) res.status(constant.SUCCESS).send('Error fetching wine data !!!');
+                    if (err) {
+                        console.log(err);
+                        return res.status(constant.SUCCESS).send('Error fetching wine data !!!');
+                    }
 
                     if (result.length > 0) {
                         let wineDetails = {
